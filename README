@@ -1,13 +1,20 @@
 # crt
 
-FIXME: write description
+crt - Clojure Refactoring Tool
 
 ## Usage
 
-FIXME: write
+Add dependency
+[crt "1.0.0-SNAPSHOT"]
+
+Require the code
+(:require crt.core :as crt)
+
+Run the tool
+(crt/open-crt)
 
 ## License
 
-Copyright (C) 2011 FIXME
+Copyright (C) 2011 Markku Rontu
 
 Distributed under the Eclipse Public License, the same as Clojure.
