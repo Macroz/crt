@@ -5,16 +5,15 @@
 (defn to-node [element]
   (cond
    (string? element) (DefaultMutableTreeNode. element)
-   (or (seq? element)
-       (vector? element)) (let [node (DefaultMutableTreeNode. (first element))]
-                            (doall (for [child (map to-node (second element))]
-                                     (.add node child)))
-                            node)
-       :else (DefaultMutableTreeNode. "FAIL")))
+   (coll? element) (let [node (DefaultMutableTreeNode. (first element))]
+                     (doall (for [child (map to-node (sort (second element)))]
+                              (.add node child)))
+                     node)
+   :else (DefaultMutableTreeNode. "FAIL")))
 
 (defn ns-to-seqs [ns]
   [(str (ns-name ns))
-   (map str (keys (ns-publics ns)))])
+   (sort (map str (keys (ns-publics ns))))])
 
 (defn make-root []
   ["Root" (map ns-to-seqs (all-ns))])
