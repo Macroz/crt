@@ -15,8 +15,16 @@
   [(str (ns-name ns))
    (sort (map str (keys (ns-publics ns))))])
 
+(defn re-ns [pattern]
+  (comp (partial re-matches (re-pattern (str pattern ".*"))) str))
+
+(defn interesting-ns []
+  (->> (all-ns)
+       (remove (re-ns "clojure"))
+       (remove (re-ns "swank"))))
+
 (defn make-root []
-  ["Root" (map ns-to-seqs (all-ns))])
+  ["Root" (map ns-to-seqs (interesting-ns))])
 
 (defn make-tree []
   (JTree. (to-node (make-root))))
