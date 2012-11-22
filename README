@@ -2,6 +2,14 @@
 
 crt - Clojure Refactoring Tool
 
+## Disclaimer
+
+This is a work in progress. 
+
+## Idea
+
+I'm trying to create a simple tool for the most basic Clojure refactorings, such as rename, extract function and move, as as portable Clojure code. Also there will be various useful visualizations for your Clojure project structure.
+
 ## Usage
 
 Add dependency
@@ -15,6 +23,6 @@ Run the tool
 
 ## License
 
-Copyright (C) 2011 Markku Rontu
+Copyright (C) 2011-2012 Markku Rontu / markku.rontu@iki.fi / @zorcam
 
 Distributed under the Eclipse Public License, the same as Clojure.
