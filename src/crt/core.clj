@@ -16,6 +16,7 @@
 (defn interesting-ns? [ns]
   (not (or (ns-matches? ns "clojure")
            (ns-matches? ns "swank")
+           (ns-matches? ns "complete.core")
            (ns-matches? ns "user")
            ;;(ns-matches? ns "crt")
            )))
