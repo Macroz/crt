@@ -1,6 +1,5 @@
 (ns crt.core
-  (:use [clojure.contrib.repl-utils])
-  (:import [javax.swing JFrame JTree JScrollPane SwingConstants]
+   (:import [javax.swing JFrame JTree JScrollPane SwingConstants]
            [javax.swing.tree DefaultMutableTreeNode]
            [com.mxgraph.swing mxGraphComponent]
            [com.mxgraph.view mxGraph]
@@ -27,7 +26,6 @@
 (defprotocol GraphNode
   (node-name [this])
   (node-edges [this]))
-
 
 (extend-type clojure.lang.Namespace
   GraphNode
@@ -112,7 +110,8 @@
 (defn open-crt []
   (let [frame (JFrame. "crt")]
     (.add (.getContentPane frame)
-          (make-graph))
+          (make-graph)
+          )
     ;;(JScrollPane. (make-tree)))
     (doto frame
       (.setDefaultCloseOperation JFrame/DISPOSE_ON_CLOSE)
