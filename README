@@ -13,7 +13,7 @@ I'm trying to create a simple tool for the most basic Clojure refactorings, such
 ## Usage
 
 Add dependency
-[crt "1.0.0-SNAPSHOT"]
+[crt "0.1.0"]
 
 Require the code
 (:require crt.core :as crt)
