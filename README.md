@@ -31,6 +31,6 @@ A window will pop up with your code dependencies shown. There is not much else y
 License
 ---------
 
-Copyright (C) 2011-2012 Markku Rontu / markku.rontu@iki.fi / @zorcam
+Copyright (C) 2011-2012 [Markku Rontu](http://markku.rontu.net) / markku.rontu@iki.fi / @zorcam
 
 Distributed under the Eclipse Public License, the same as Clojure.
