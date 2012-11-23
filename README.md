@@ -9,7 +9,7 @@ This is a work in progress.
 Idea
 ------
 
-I'm trying to create a simple tool for the most basic Clojure refactorings, such as rename, extract function and move, as as portable Clojure code. Also there will be various useful visualizations for your Clojure project structure.
+I'm trying to create a simple tool for the most basic Clojure refactorings, such as rename, extract function and move, as portable Clojure code. Also there will be various useful visualizations for your Clojure project structure.
 
 Usage
 -------
@@ -26,7 +26,7 @@ Run the tool while you have your other code loaded as well
     
     (crt/open-crt)
 
-A window will pop up with your code dependencies shown. There is not much you can do at the moment.
+A window will pop up with your code dependencies shown. There is not much else you can do at the moment.
 
 License
 ---------
